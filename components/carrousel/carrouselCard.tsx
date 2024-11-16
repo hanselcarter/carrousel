@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { SampleDataItem } from "@/models/models";
+import { Play } from "lucide-react";
 
 interface CarrouselCardProps {
   readonly index: number;
@@ -62,20 +63,20 @@ export default function CarrouselCard({
               {item.stats}
               <span className="text-gray-500"> so far</span>
             </p>
-            <div className="flex gap-2 items-center text-sm opacity-80">
-              <span>{item.views}</span>
+            <div className="flex gap-3 items-center text-sm opacity-80">
+              <div className="flex gap-1 items-center">
+                <Play className="w-3 h-3" />
+                <span>{item.views}</span>
+              </div>
               <div className="flex gap-1 items-center">
                 <Avatar className="h-5 w-5">
-                  <AvatarImage
-                    src="https://avatar.iran.liara.run/public/boy?username=Ash"
-                    alt="avatar"
-                  />
+                  <AvatarImage src={item.avatarSrc} alt="avatar" />
                   <AvatarFallback>AV</AvatarFallback>
                 </Avatar>
                 <span>{item.userName}</span>
               </div>
             </div>
-            <div className="flex gap-1">
+            <div className="flex gap-2">
               <p className="text-xs opacity-80 text-gray-500">{item.likes}</p>
               <p className="text-xs opacity-80 text-gray-500">{item.videos}</p>
             </div>
