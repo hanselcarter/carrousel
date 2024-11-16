@@ -21,7 +21,7 @@ export default function Carrousel() {
 
   return (
     <div className="relative w-full h-[100vh] bg-black  overflow-hidden">
-      <div className="absolute inset-0 flex items-center  justify-center p-12">
+      <div className="absolute inset-0 flex  justify-center p-12">
         {sampleData.map((item, index) => {
           const isActive = index === activeIndex;
           const isPrev =
@@ -41,7 +41,7 @@ export default function Carrousel() {
         })}
       </div>
 
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-4 z-50">
+      <div className="absolute bottom-24 left-0 right-0 flex justify-center gap-4 z-50">
         <Button
           variant="secondary"
           size="icon"
