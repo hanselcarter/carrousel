@@ -65,15 +65,15 @@ export default function CarrouselCard({
             </p>
             <div className="flex gap-3 items-center text-sm opacity-80">
               <div className="flex gap-1 items-center">
-                <Play className="w-3 h-3" />
-                <span>{item.views}</span>
+                <Play className="w-4 h-4" />
+                <span className="font-semibold">{item.views}</span>
               </div>
               <div className="flex gap-1 items-center">
                 <Avatar className="h-5 w-5">
                   <AvatarImage src={item.avatarSrc} alt="avatar" />
                   <AvatarFallback>AV</AvatarFallback>
                 </Avatar>
-                <span>{item.userName}</span>
+                <span className="font-semibold">{item.userName}</span>
               </div>
             </div>
             <div className="flex gap-2">
