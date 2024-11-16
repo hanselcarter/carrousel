@@ -21,7 +21,7 @@ export default function Carrousel() {
 
   return (
     <div className="relative w-full h-[100vh] bg-black  overflow-hidden">
-      <div className="absolute inset-0 flex sampleData-center justify-center p-12">
+      <div className="absolute inset-0 flex items-center  justify-center p-12">
         {sampleData.map((item, index) => {
           const isActive = index === activeIndex;
           const isPrev =
